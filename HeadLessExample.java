@@ -20,12 +20,8 @@ public class HeadLessExample {
   WebDriver driver; 
   
   @Test (groups = "Regression")
-  //This means, Test testTourismLogin belongs to Regression group.  
   public void testTourismLogin() throws InterruptedException {
-		// 2. Go to the url
 		driver.get("https://nichethyself.com/tourism/home.html");
-		// get() takes us to the url for further steps.
-		// 3. Enter username
 		// Two steps -
 		// 1. Tell Selenium Which element you want to take action on
 		WebElement username = driver.findElement(By.name("username"));
@@ -51,11 +47,6 @@ public class HeadLessExample {
 		String expectedPageTitle = "My account1";
 		String actualPageTitle = driver.getTitle();
 		System.out.println("Actual Title is " + actualPageTitle);
-		/*
-		 * if (expectedPageTitle.equals(actualPageTitle)) {
-		 * System.out.println("Test Case Passed!"); } else {
-		 * System.out.println("Test Case Failed!"); }
-		 */
 		
 		//assertEquals(actualPageTitle,expectedPageTitle);
 		assertEquals(actualPageTitle,expectedPageTitle, "Expected Title not matching with actual");
