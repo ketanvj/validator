@@ -19,7 +19,7 @@ import org.testng.annotations.AfterClass;
 public class HeadLessExample {
   WebDriver driver; 
   
-  @Test (groups = "Regression")
+  @Test (groups = {"Regression","Win32"})
   public void testTourismLogin() throws InterruptedException {
 		driver.get("https://nichethyself.com/tourism/home.html");
 		// Two steps -
