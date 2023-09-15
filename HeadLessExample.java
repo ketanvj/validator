@@ -19,15 +19,14 @@ import org.testng.annotations.AfterClass;
 public class HeadLessExample {
   WebDriver driver; 
   
-  @Test (groups = {"Regression","Win32"})
+
+  @Test (groups = {"Regression","Win32","Smoke"})
   public void testTourismLogin() throws InterruptedException {
 		driver.get("https://nichethyself.com/tourism/home.html");
 		// Two steps -
 		// 1. Tell Selenium Which element you want to take action on
 		WebElement username = driver.findElement(By.name("username"));
 		username.sendKeys("stc123");		
-//		    By userLocator = By.name("username");
-//		    username = driver.findElement(userLocator);
 
 		// findElement() returns an object of type WebElement
 		// 2. Type.
